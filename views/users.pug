@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h2 Users List
+  ul
+    each user in users
+      li #{user.username} - #{user.email}
