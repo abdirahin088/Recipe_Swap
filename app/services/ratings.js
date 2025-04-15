@@ -34,3 +34,5 @@ async function getAdvancedRating(userId, recipeId) {
 }
 
 module.exports = { rateRecipe, calculateUserPoints, getAdvancedRating };
+
+
