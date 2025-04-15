@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  .container
+    h1 Users List
+    ul
+      each user in users
+        li #{user.username} - #{user.email}
+    a(href="/") Back to Home

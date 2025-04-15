@@ -1,0 +1,59 @@
+extends layout
+
+block content
+  .container
+    h1 Recipe Swap
+
+    if user
+      h2 Welcome back, #{user.username}!
+      p You have #{points} points.
+
+      // Display the user's interests
+      h3 Your Interests:
+      ul
+        if userInterests.length
+          each interest in userInterests
+            li #{interest.interest} 
+        else
+          p No interests added yet.
+
+      h3 Matches for You
+      ul
+        if matches.length
+          each match in matches
+            li
+              strong User ID: #{match.userId}
+              p Interests: #{match.commonInterests.join(', ')}
+              p Match Score: #{match.matchScore}
+        else
+          p No matches found.
+
+      h3 Latest Recipes
+      ul
+        if recipes.length
+          each recipe in recipes
+            li
+              strong #{recipe.title}
+              p #{recipe.description}
+              form(action="/rate" method="POST")
+                input(type="hidden" name="userId" value= user.id)
+                input(type="hidden" name="recipeId" value= recipe.id)
+                label(for="rating") Rate:
+                input(type="number" name="rating" min="1" max="5" required)
+                button(type="submit") Submit Rating
+        else
+          p No recipes yet.
+
+      a(href="/add-recipe") Add New Recipe
+      a(href="/add-interest") Add New Interest
+      a(href="/recipes") View All Recipes
+      a(href="/matches") Go to Matches
+
+      // Logout button
+      form(action='/logout', method='POST')
+        button(type='submit' class='logout-btn') Logout
+    else
+      h2 Welcome to Recipe Swap!
+      p Share and explore recipes from around the world.
+      a(href="/login") Login
+      a(href="/register") Register

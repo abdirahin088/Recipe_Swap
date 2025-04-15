@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Matches for You
+  ul
+    each match in matches
+      li
+        h3 User #{match.userId}
+        p Common Interests: #{match.commonInterests.join(', ')}
+        p Match Score: #{match.matchScore}

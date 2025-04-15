@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .container
+    h1 Register Page
+    form(action="/register" method="POST")
+      label(for="username") Username:
+      input(type="text" name="username" required)
+      br
+      label(for="email") Email:
+      input(type="email" name="email" required)
+      br
+      label(for="password") Password:
+      input(type="password" name="password" required)
+      br
+      button(type="submit") Register

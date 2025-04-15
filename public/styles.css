@@ -1,0 +1,127 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Links */
+nav a {
+    margin-right: 20px;
+    color: #2a9df4;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #0f80c0;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h1, h2, h3 {
+    text-align: center;
+    color: #2a9df4;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Label Styles */
+form label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+/* Input and Textarea Styling */
+form input, form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Instructions textarea */
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Submit Button Styling */
+form button {
+    padding: 12px;
+    font-size: 1.1em;
+    background-color: #2a9df4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+}
+
+form button:hover {
+    background-color: #0f80c0;
+}
+
+/* Logout Button Styling */
+.logout-btn {
+    padding: 12px;
+    font-size: 1.1em;
+    background-color: #f44336; /* Red background for the logout button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 20px; /* Add some space between other buttons and logout */
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f; /* Darker red when hovered */
+}
+
+/* Links Styles */
+a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: #2a9df4;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0f80c0;
+}
+
+/* Paragraph Styling */
+p {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.6;
+}

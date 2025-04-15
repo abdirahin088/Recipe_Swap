@@ -1,0 +1,29 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3015:3000"
+    environment:
+      MYSQL_HOST: db
+      MYSQL_USER: root
+      MYSQL_PASS: root
+      MYSQL_DATABASE: sd2-db
+      DB_PORT: 3315
+    depends_on:
+      - db
+    networks:
+      - recipe-network
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sd2-db
+    ports:
+      - "3315"  # Map external port 3315 to internal port 3306
+    networks:
+      - recipe-network
+
+networks:
+  recipe-network:
+    driver: bridge

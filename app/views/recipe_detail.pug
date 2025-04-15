@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  h2 #{recipe.title}
+  img(src="/images/" + recipe.image, alt=recipe.title)
+  p #{recipe.description}

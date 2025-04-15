@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2 All Recipes
+  ul
+    if recipes.length
+      each recipe in recipes
+        li
+          strong #{recipe.title}
+          p #{recipe.description}
+    else
+      p No recipes yet.

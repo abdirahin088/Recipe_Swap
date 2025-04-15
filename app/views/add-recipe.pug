@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .container
+    h1 Add a New Recipe
+
+    form(action="/submit-recipe" method="POST")
+      label(for="title") Recipe Title:
+      input(type="text" name="title" required)
+
+      label(for="description") Recipe Description:
+      textarea(name="description" required)
+
+      label(for="ingredients") Ingredients:
+      textarea(name="ingredients" required)
+
+      label(for="instructions") Instructions:
+      textarea(name="instructions" required)
+
+      button(type="submit") Submit Recipe
